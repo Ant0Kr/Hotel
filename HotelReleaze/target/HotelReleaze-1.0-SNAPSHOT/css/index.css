@@ -1,0 +1,93 @@
+body{
+
+    background: #1683a3 url(img/sativa.png);
+    margin: 0;
+    padding: 0;
+    font: 16px/24px Arial,Tahoma, sans-serif;
+
+}
+
+
+/*Структура сайта*/
+
+div.header{
+    height: 100px;
+    background: #efefef url(img/headLay.png);
+}
+
+header.logo{
+
+    padding-left:  10px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    color: #1683a3;
+
+}
+input{
+    text-decoration: none;
+    background: none;
+    border: none;
+    margin: 0 0 0 10px;
+}
+
+div.mid{
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+/**Шапка сайта**/
+div.topmenu{
+    float: right;
+    height: 90px;
+    line-height: 90px;
+}
+div.topmenu input{
+    margin: 0 0 0 10px;
+    color: #1683a3;
+
+}
+
+div.topmenu input:hover{
+    color: #fff;
+}
+
+/**Центр сайта**/
+
+div.fon{
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top:none;
+    padding: 40px;
+}
+
+img.hotel{
+    padding-left: 100px;
+
+}
+
+img.boss{
+    padding-left: 40px;
+
+}
+
+div.labels{
+    padding-bottom: 20px;
+}
+
+div.bossLabel{
+    float: left;
+    margin-left: 75px;
+    margin-bottom: 20px;
+}
+
+div.hotelLabel{
+    float: right;
+    margin-right: 240px;
+    margin-bottom: 20px;
+}
+
+
+
+
+

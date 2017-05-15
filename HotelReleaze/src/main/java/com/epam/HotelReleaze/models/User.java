@@ -3,16 +3,18 @@ package com.epam.HotelReleaze.models;
 import javax.persistence.*;
 
 
+
 /**
  * Created by Antoha12018 on 10.05.2017.
  */
 @Entity
 @Table(name = "users")
-public class User {
+public class User  {
+
     @Id
     @Column(name = "userID")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private int userID;
 
     @Column(name = "username")
     private String username;
@@ -21,18 +23,30 @@ public class User {
     private String password;
 
     @Column(name = "role")
-    private String role;
+    private boolean role;
 
-    //value under this annotation not write into DB
-    @Transient
-    private String confirmPassword;
-
-    public Long getId() {
-        return id;
+    public User(String username, String password,Boolean role) {
+        this.username = username;
+        this.password = password;
+        this.role = role;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public User(){}
+
+    public User(User user){
+        this.userID = user.userID;
+        this.username = user.username;
+        this.password = user.password;
+        this.role = user.role;
+    }
+
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int id) {
+        this.userID = id;
     }
 
     public String getUsername() {
@@ -51,19 +65,12 @@ public class User {
         this.password = password;
     }
 
-    public String getRole(){
+    public boolean getRole(){
         return role;
     }
 
-    public void setRole(String role){
+    public void setRole(boolean role){
         this.role = role;
     }
 
-    public String getConfirmPassword(){
-        return confirmPassword;
-    }
-
-    public void setConfirmPassword(String confirmPassword){
-        this.confirmPassword = confirmPassword;
-    }
 }

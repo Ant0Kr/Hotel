@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="example">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mydata"/>
+    <schema id="5" parent="1" name="mydatabase"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="sys"/>
+    <schema id="9" parent="1" name="warehouse"/>
+    <schema id="10" parent="1" name="hotel">
+      <Visible>1</Visible>
+    </schema>
+    <table id="11" parent="10" name="hotelrooms"/>
+    <table id="12" parent="10" name="users"/>
+    <column id="13" parent="11" name="numbersID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="14" parent="11" name="state">
+      <Position>2</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="15" parent="11" name="userID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="16" parent="11" name="PRIMARY">
+      <ColNames>numbersID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="17" parent="12" name="userID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="18" parent="12" name="username">
+      <Position>2</Position>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="19" parent="12" name="password">
+      <Position>3</Position>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="20" parent="12" name="role">
+      <Position>4</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <key id="21" parent="12" name="PRIMARY">
+      <ColNames>userID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
