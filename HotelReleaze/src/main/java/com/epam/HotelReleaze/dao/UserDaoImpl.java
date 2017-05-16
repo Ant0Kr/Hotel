@@ -19,6 +19,7 @@ public class UserDaoImpl  implements UserDao{
     public UserDaoImpl(){
         session = HibernateUtil.getSessionFactory().openSession();
     }
+
     @Override
     public void addUser(User user) throws Exception {
         session.beginTransaction();
@@ -35,14 +36,14 @@ public class UserDaoImpl  implements UserDao{
 
     @Override
     public User getUserById(int id) throws Exception {
-        User user = null;
+        User user;
         user = (User) session.load(User.class,id);
         return user;
     }
 
     @Override
     public Collection<User> getAllUsers() throws Exception {
-        List<User> users = new ArrayList<User>();
+        List<User> users;
         users = session.createCriteria(User.class).list();
         return users;
     }

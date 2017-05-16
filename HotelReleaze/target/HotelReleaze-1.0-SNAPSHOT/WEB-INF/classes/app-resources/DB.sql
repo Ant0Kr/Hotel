@@ -11,9 +11,11 @@ CREATE TABLE IF NOT EXISTS users(
   PRIMARY KEY (userID)
 );
 
+USE hotel;
 DROP TABLE IF EXISTS hotelRooms;
 CREATE TABLE IF NOT EXISTS hotelRooms(
   numbersID INT AUTO_INCREMENT,
+  roomType INT,
   state BOOLEAN,
   userID INT,
   PRIMARY KEY (numbersID)
@@ -22,12 +24,14 @@ CREATE TABLE IF NOT EXISTS hotelRooms(
 USE hotel;
 INSERT INTO users(username,password,role)VALUES('admin','admin',TRUE );
 INSERT INTO users(username,password,role)VALUES('user','user',FALSE );
-INSERT INTO hotelRooms(state)VALUES(FALSE);
-INSERT INTO hotelRooms(state)VALUES(FALSE);
-INSERT INTO hotelRooms(state)VALUES(FALSE);
-INSERT INTO hotelRooms(state)VALUES(FALSE);
-INSERT INTO hotelRooms(state)VALUES(FALSE);
-INSERT INTO hotelRooms(state)VALUES(FALSE);
-INSERT INTO hotelRooms(state)VALUES(FALSE);
-INSERT INTO hotelRooms(state)VALUES(FALSE);
-INSERT INTO hotelRooms(state)VALUES(FALSE);
+
+INSERT INTO hotelRooms(roomType,state,userID)VALUES(1,FALSE,0);
+INSERT INTO hotelRooms(roomType,state,userID)VALUES(1,true,2);
+INSERT INTO hotelRooms(roomType,state,userID)VALUES(1,FALSE,0);
+INSERT INTO hotelRooms(roomType,state,userID)VALUES(1,FALSE,0);
+INSERT INTO hotelRooms(roomType,state,userID)VALUES(2,FALSE,0);
+INSERT INTO hotelRooms(roomType,state,userID)VALUES(2,FALSE,0);
+INSERT INTO hotelRooms(roomType,state,userID)VALUES(2,FALSE,0);
+INSERT INTO hotelRooms(roomType,state,userID)VALUES(3,FALSE,0);
+INSERT INTO hotelRooms(roomType,state,userID)VALUES(3,FALSE,0);
+

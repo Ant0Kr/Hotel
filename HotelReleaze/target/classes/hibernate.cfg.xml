@@ -16,6 +16,7 @@
         <!--<property name="format_sql">true</property>-->
 
         <mapping class="com.epam.HotelReleaze.models.User"/>
+        <mapping class="com.epam.HotelReleaze.models.Room"/>
 
 
     </session-factory>

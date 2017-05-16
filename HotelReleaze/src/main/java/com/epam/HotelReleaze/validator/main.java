@@ -12,7 +12,7 @@ public class main {
 
     public static void main(String [] args) throws Exception {
         Session session = null;
-        User user = Factory.getInstance().getItemDAO().getUserById(1);
+        User user = Factory.getInstance().getUserDAO().getUserById(1);
         System.out.println(user.getUsername());
 
 

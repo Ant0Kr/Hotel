@@ -73,4 +73,11 @@ public class User  {
         this.role = role;
     }
 
+    public String getStringRole(){
+        if(role)
+            return "Admin";
+        else
+            return "User";
+    }
+
 }

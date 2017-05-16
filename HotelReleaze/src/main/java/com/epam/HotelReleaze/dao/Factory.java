@@ -6,6 +6,7 @@ package com.epam.HotelReleaze.dao;
 public class Factory {
     private static Factory instance = null;
     private static UserDao userDAO = null;
+    private static RoomDao roomDAO = null;
 
 
     public static synchronized Factory getInstance() {
@@ -15,11 +16,18 @@ public class Factory {
         return instance;
     }
 
-    public UserDao getItemDAO() {
+    public UserDao getUserDAO() {
         if (userDAO == null) {
             userDAO = new UserDaoImpl();
         }
         return userDAO;
+    }
+
+    public RoomDao getRoomDAO() {
+        if (roomDAO == null) {
+            roomDAO = new RoomDaoImpl();
+        }
+        return roomDAO;
     }
 
 }

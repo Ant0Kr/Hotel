@@ -1,0 +1,73 @@
+body{
+
+    background: #1683a3 url(img/sativa.png);
+    margin: 0;
+    padding: 0;
+    font: 16px/24px Arial,Tahoma, sans-serif;
+
+}
+
+
+/*Структура сайта*/
+
+div.header{
+    height: 100px;
+    background: #efefef url(img/headLay.png);
+}
+
+header.logo{
+
+    padding-left:  10px;
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+
+
+div.mid{
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+/**Шапка сайта**/
+div.topmenu{
+    float: right;
+    height: 90px;
+    line-height: 90px;
+}
+div.topmenu input{
+    margin: 0 0 0 10px;
+    color: #1683a3;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
+div.topmenu input:hover{
+    color: #fff;
+}
+
+/**Центр сайта**/
+
+div.fon{
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top:none;
+    padding: 40px;
+}
+
+div.container{
+    width: 300px;
+
+}
+
+select{
+    width: 120px;
+    height: 30px;
+    border-radius: 4px;
+    margin:10px 10px 10px 10px;
+}
+
+.langRU{
+    width: 170px;
+}
